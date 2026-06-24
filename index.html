@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyaansh Mertia</title>
+    
+    <!-- Modern, clean typography widely used in modern academic pages -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --text-main: #111111;
+            --text-muted: #555555;
+            --link-blue: #0056b3;
+            --bg-color: #ffffff;
+            --border-color: #eaeaea;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        p { margin-bottom: 1rem; color: var(--text-main); }
+        
+        a {
+            color: var(--link-blue);
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+
+        /* Header / Bio Section Layout */
+        .intro-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        .intro-text { flex: 1; }
+        
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 4px;
+            object-fit: cover;
+            flex-shrink: 0;
+            background-color: #f0f0f0;
+        }
+
+        .contact-links {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .contact-links a {
+            color: var(--link-blue);
+            font-weight: 500;
+        }
+        .contact-divider {
+            color: var(--text-muted);
+            margin: 0 0.5rem;
+        }
+
+        /* News Section */
+        .news-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.95rem;
+        }
+        .news-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            gap: 1rem;
+        }
+        .news-date {
+            font-weight: 600;
+            color: var(--text-muted);
+            min-width: 80px;
+        }
+
+        /* Education */
+        .edu-item { margin-bottom: 1rem; }
+        .edu-degree { font-weight: 600; }
+        .edu-meta { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Publications */
+        .pub-list {
+            list-style: none;
+            padding: 0;
+        }
+        .pub-item { margin-bottom: 1.5rem; }
+        .pub-title {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+        .pub-authors {
+            color: var(--text-main);
+            margin-bottom: 0.2rem;
+            display: block;
+        }
+        .pub-venue {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .pub-links {
+            margin-top: 0.3rem;
+            font-size: 0.9rem;
+        }
+        .pub-links a {
+            margin-right: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: right;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 650px) {
+            .intro-container { flex-direction: column-reverse; }
+            .profile-pic { width: 100%; max-width: 250px; height: auto; aspect-ratio: 1/1; }
+            .news-list li { flex-direction: column; gap: 0.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="intro-container">
+        <div class="intro-text">
+            <h1>Divyaansh Mertia</h1>
+            <p>I am a Ph.D. student in the Department of Computer Science and Engineering at the <strong>Indian Institute of Technology (IIT) Jodhpur</strong>, where I work in the <a href="https://fadegroup.github.io/" target="_blank">FADE research group</a> and am supported by IndiaAI Fellowship.</p>
+            
+            <p>My research focuses on algorithmic fairness and the development of trustworthy artificial intelligence. Specifically, I work on <strong>latent space steering</strong> and bias mitigation strategies for deep generative architectures and foundation modelsp.</p>
+
+            <div class="contact-links">
+                <a href="mailto:divyaanshmertia@gmail.com" target="_blank">Email</a> <span class="contact-divider">/</span> 
+                <a href="https://github.com/Divyaanshmertia" target="_blank">GitHub</a> <span class="contact-divider">/</span> 
+                <a href="https://www.linkedin.com/in/divyaansh-mertia/" target="_blank">LinkedIn</a> <span class="contact-divider">/</span> 
+                <a href="cv.pdf" target="_blank">CV</a>
+            </div>
+        </div>
+        
+        <!-- Replace 'profile.jpg' with your actual image path -->
+        <img src="profile.jpeg" alt="Divyaansh Mertia" class="profile-pic">
+    </div>
+
+    <section id="news">
+        <h2>News</h2>
+        <ul class="news-list">
+            <li>
+                <div class="news-date">Jun 2026</div>
+                <div>Four papers accepted at NCVPRIPG.</div>
+            </li>
+            <li>
+                <div class="news-date">Jun 2026</div>
+                <div>Awarded the IndiaAI Fellowship to support my doctoral research in deep generative models.</div>
+            </li>
+            <li>
+                <div class="news-date">Aug 2025</div>
+                <div>Commenced my Ph.D. studies in Computer Science and Engineering at IIT Jodhpur.</div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        
+        <div class="edu-item">
+            <div class="edu-degree">Ph.D. in Computer Science and Engineering</div>
+            <div class="edu-meta">Indian Institute of Technology (IIT) Jodhpur, 2025 – Present</div>
+            <div class="edu-meta">CGPA: 9.25/10</div>
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-degree">M.Tech. in Computer Science and Engineering</div>
+            <div class="edu-meta">Indian Institute of Technology (IIT) Jodhpur, 2023 – 2025</div>
+            <div class="edu-meta">CGPA: 8.09/10</div>
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-degree">B.Tech. in Computer Science and Engineering</div>
+            <div class="edu-meta">Jodhpur Institute of Engineering and Technology (JIET), 2019 – 2023</div>
+            <div class="edu-meta">CGPA: 8.91/10</div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <h2>Publications & Preprints</h2>
+        
+        <ul class="pub-list">
+            <li class="pub-item">
+                <span class="pub-title">Learning to Be Biased: Improving Fairness via Controlled Bias Specialization</span>
+                <span class="pub-authors">Divyaansh Mertia, et al.</span>
+                <span class="pub-venue">Under Review, 2026</span>
+                
+            </li>
+
+ 
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2026 Divyaansh Mertia.
+    </footer>
+
+</body>
+</html>
